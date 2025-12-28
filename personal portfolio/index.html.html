@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home Page</title>
+  <link rel="stylesheet" href="portfoliyo.css">
+  <link rel="icon" href="icon.jpg" type="image/png" sizes="32x32">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+</head>
+<body>
+
+<div class="container">
+  <button id="toggle-theme">🔆🌙</button>
+</div>
+
+<header class="header" id="header">
+  <a href="portfoliyo.html" class="logo">
+    <img src="icon.jpg" alt="iconlogo" class="main-icon"/>
+    <span>Sathish</span>
+  </a>
+  <div class="navbar">
+    <a href="portfoliyo.html" class="active">Home</a>
+    <a href="skill.html">Skills</a>
+    <a href="education.html">Education</a>
+  </div>
+  <div class="main">
+    <a href="contact.html" class="user main-items"><i class="fas fa-envelope cm-icon"></i>Contact Me</a>
+    <div class="main-items menu-icon-container" id="menu-icon-js">
+      <div class="bx bx-menu" id="menu-icon"></div>
+    </div>
+  </div>
+</header>
+
+<div class="page">
+  <section class="about" id="about">
+    <div class="about-content">
+      <div class="column right">
+        <img src="profile.jpg" alt="">
+      </div>
+      <div class="column left">
+        <div class="text">I'm sathish and I'm a Frontend developer<span id="typed" class="iAm"></span></div>
+        <p>
+          Creative Frontend Developer skilled in HTML, CSS, JavaScript, React.js. Experienced in building responsive, user-friendly web interfaces with a strong focus on UI/UX. Passionate about clean code, design, and staying updated with modern web trends.
+        </p>
+        <div class="buttons">
+         <a href="C:\Users\sathi\OneDrive\Desktop\personal portfolio\Sathish dev resume.pdf" download="Sathish-Resume.pdf">Download CV</a>
+
+          <a href="contact.html" class="cm-button">Contact Me</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="left">
+      &copy; 2025 • M.sathish • All Rights Reserved
+    </div>
+    <div class="right">
+      <div class="social"><a href="https://www.instagram.com/mr._man_of_hearts_18?igsh=M3o5eHN4dmdlN3di" target="_blank"><i class="fa-brands fa-instagram"></i></a></div>
+      <div class="social"><a href="https://www.linkedin.com/in/ritoncharlox" target="_blank"><i class="fa-brands fa-linkedin"></i></a></div>
+      <div class="social"><a href="https://github.com/mscsathish" target="_blank"><i class="fa-brands fa-github"></i></a></div>
+    </div>
+  </footer>
+</div>
+
+<div class="nav-touch-close" id="nav-tc-js"></div>
+
+<!-- External scripts -->
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script>
+  // EmailJS Init
+  emailjs.init({ publicKey: "yiMzeSr04gqEy48ou" });
+
+  // Typed.js animation
+  var typed = new Typed('#typed', {
+    strings: ['Web Developer'],
+    typeSpeed: 55,
+  });
+</script>
+
+<script src="portfoliyo.js"></script>
+
+</body>
+</html>
