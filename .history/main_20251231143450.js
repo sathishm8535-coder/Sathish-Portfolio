@@ -223,10 +223,10 @@ document.addEventListener('DOMContentLoaded', function() {
             // Send email using EmailJS
             emailjs
               .sendForm(
-                "service_4v7s1rp",
+                "YOUR_SERVICE_ID",
                 "template_gxw3shr",
                 this,
-                "yiMzeSr04gqEy48ou"
+                "YOUR_PUBLIC_KEY"
               )
               .then(() => {
                 showSuccessMessage("Message sent successfully!");

@@ -226,7 +226,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 "service_4v7s1rp",
                 "template_gxw3shr",
                 this,
-                "yiMzeSr04gqEy48ou"
+                "YOUR_PUBLIC_KEY"
               )
               .then(() => {
                 showSuccessMessage("Message sent successfully!");

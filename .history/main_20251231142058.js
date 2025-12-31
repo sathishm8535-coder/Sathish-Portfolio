@@ -221,31 +221,25 @@ document.addEventListener('DOMContentLoaded', function() {
             submitBtn.disabled = true;
             
             // Send email using EmailJS
-            emailjs
-              .sendForm(
-                "service_4v7s1rp",
-                "template_gxw3shr",
-                this,
-                "yiMzeSr04gqEy48ou"
-              )
-              .then(() => {
-                showSuccessMessage("Message sent successfully!");
-                this.reset();
-                // Remove focused class from all form groups
-                inputs.forEach((input) => {
-                  input.parentElement.classList.remove("focused");
+            emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this, 'YOUR_PUBLIC_KEY')
+                .then(() => {
+                    showSuccessMessage('Message sent successfully!');
+                    this.reset();
+                    // Remove focused class from all form groups
+                    inputs.forEach(input => {
+                        input.parentElement.classList.remove('focused');
+                    });
+                })
+                .catch(() => {
+                    showErrorMessage('Failed to send message. Please try again.');
+                })
+                .finally(() => {
+                    // Reset button state
+                    submitBtn.classList.remove('loading');
+                    btnText.style.display = 'inline';
+                    btnLoading.style.display = 'none';
+                    submitBtn.disabled = false;
                 });
-              })
-              .catch(() => {
-                showErrorMessage("Failed to send message. Please try again.");
-              })
-              .finally(() => {
-                // Reset button state
-                submitBtn.classList.remove("loading");
-                btnText.style.display = "inline";
-                btnLoading.style.display = "none";
-                submitBtn.disabled = false;
-              });
         });
         
         function showSuccessMessage(message = 'Message Sent Successfully!') {
