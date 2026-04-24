@@ -223,7 +223,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // Send email using EmailJS
             emailjs
               .sendForm(
-                "service_4v7s1rp",
+                "service_4v7s1rp"
                 "template_gxw3shr",
                 this,
                 "yiMzeSr04gqEy48ou"
